@@ -2,7 +2,7 @@
 var delay;
 var image_results = [];
 const api_key = '3QIjIWWudRjqoTj65jOD3lThIpTA9Sx2';
-const url = 'api.giphy.com/v1/gifs/search?api_key=' + api_key + '&';
+const url = 'https://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&';
 
 //for snoppy brethrens
 function postJobs(){
