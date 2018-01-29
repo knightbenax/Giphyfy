@@ -2,7 +2,7 @@
 var delay;
 var image_results = [];
 const api_key = '3QIjIWWudRjqoTj65jOD3lThIpTA9Sx2';
-const url = 'http://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&';
+const url = 'https://api.giphy.com/v1/gifs/search?api_key=' + api_key + '&';
 
 //for snoppy brethrens
 function postJobs(){
@@ -26,12 +26,17 @@ function append(parent, el) {
   return parent.appendChild(el); // Append the second parameter(element) to the first one
 }
 
+function removeNodes(element){
+  var myNode = document.getElementById(element);
+  while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+  }
+}
+
 function displayResults() {
   var image_results_holder = document.getElementById('image_results');
-
+  removeNodes('image_results');
   //we want to remove previous results before we display the new one
-  image_results_holder.clearChildren;
-
   //alert(image_results.length);
 
   for (var i = 0; i < image_results.length; i++){
