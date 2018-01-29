@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/nprogress/nprogress.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />-->
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
@@ -26,10 +27,14 @@
           <input type="text" class="search__input" id="search_input" onkeyup="delay(fetchResult)" placeholder="What type of gif are you looking for? e.g Happy, Wow, Sad" />
         </div>
         <section id="image_results"></section>
+        <div class="spacer"></div>
       </div>
       <div class="footer">
         <div>Built with <i class="fa fa-heart footer__heart"></i> in Lagos, Nigeria</div>
       </div>
+
+      <script src="node_modules/nprogress/nprogress.js"></script>
       <script src="index.js"></script>
+
     </body>
   </html>
