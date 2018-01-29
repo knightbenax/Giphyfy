@@ -90,6 +90,17 @@ text-rendering: optimizeLegibility;
   background-color: #000;
 }
 
+.attribution{
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+
+}
+
+.attribution__image{
+  width: 160px;
+}
+
 .spacer{
   height: 20px;
 }
