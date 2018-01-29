@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Giphyfy</title>
+    <meta name="description" content="WebApp which turns a user’s text into gifs using the giphy API">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />-->
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+    <body>
+      <!--Starting point for all JS Related stuff-->
+      <div class="content">
+        <span class="intro">Hi there, Giphyfy helps you find your favourite gifs on the interwebs easily.</span>
+        <div class="search">
+          <div class="search__header">Search</div>
+          <input type="text" class="search__input" id="search_input" onkeyup="delay(fetchResult)" placeholder="What type of gif are you looking for? e.g Happy, Wow, Sad" />
+        </div>
+        <section id="image_results"></section>
+      </div>
+      <div class="footer">
+        <div>Built with <i class="fa fa-heart footer__heart"></i> in Lagos, Nigeria</div>
+      </div>
+      <script src="index.js"></script>
+    </body>
+  </html>

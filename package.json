@@ -1,0 +1,14 @@
+{
+  "name": "giphyfy",
+  "version": "0.1.0",
+  "description": "WebApp which turns a user’s text into gifs using the giphy API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bezaleel Ashefor",
+  "license": "MIT",
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  }
+}
