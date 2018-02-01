@@ -56,8 +56,9 @@ function displayResults() {
 
     var image = createNode('div');
     image.className = 'image_results__single';
-
-
+    image.onclick = function() {
+      //createDialog(image_url);
+    }
 
     image.style.backgroundImage = 'url(' + image_url + ')';
 
@@ -68,6 +69,12 @@ function displayResults() {
   }
 
   NProgress.done();
+}
+
+function createDialog(){
+
+  var parentNode = createElement('div');
+
 }
 
 function fetchResult(){
