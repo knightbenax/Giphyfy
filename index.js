@@ -40,15 +40,31 @@ function displayResults() {
   //alert(image_results.length);
 
   for (var i = 0; i < image_results.length; i++){
+    var image_url = image_results[i]['images']['original']['url'];
+    var title = image_results[i]['title'];
+
+    var image_holder = createNode('div');
+    image_holder.className = 'image_results__holder';
+
+    var button = createNode('a');
+    button.className = 'image_results__download';
+    button.setAttribute('href', image_url);
+    button.setAttribute('download', title + '.gif');
+    button.setAttribute('target', '_blank');
+    button.setAttribute('title', 'Download');
+    button.innerHTML = 'Download';
 
     var image = createNode('div');
     image.className = 'image_results__single';
 
-    var image_url = image_results[i]['images']['original']['url'];
+
 
     image.style.backgroundImage = 'url(' + image_url + ')';
 
-    append(image_results_holder, image);
+    append(image_holder, image);
+    append(image_holder, button);
+
+    append(image_results_holder, image_holder);
   }
 
   NProgress.done();
