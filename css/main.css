@@ -1,3 +1,45 @@
+@media screen and (min-width: 768px) {
+
+  #image_results{
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -5px;
+    position: relative;
+    z-index: 2;
+    overflow: scroll;
+  }
+
+  .content{
+    max-width: 1000px;
+    width: 95%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0px !important;
+  }
+
+  .image_results__holder{
+    width: calc(25% - 10px) !important;
+  }
+
+  .footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0px !important;
+    left: 0px;
+    right: 0px;
+    padding-bottom: 15px;
+    font-size: 0.7em;
+    font-weight: 300;
+    z-index: 1;
+  }
+
+}
+
 body{
   background-color: #ececec;
   color: #000;
@@ -24,11 +66,11 @@ text-rendering: optimizeLegibility;
   max-width: 1000px;
   width: 95%;
   margin: auto;
-  height: 100%;
-  display: flex;
+  min-height: 100%;
   align-content: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 50px;
 }
 
 
@@ -71,7 +113,7 @@ text-rendering: optimizeLegibility;
 }
 
 #image_results{
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-wrap: wrap;
   margin: 0px -5px;
@@ -80,22 +122,34 @@ text-rendering: optimizeLegibility;
   overflow: scroll;
 }
 
-.image_results__single{
-  width: calc(25% - 10px);
-  height: 150px;
-  background-size: cover;
+.image_results__holder{
+  width: calc(50% - 10px);
   margin-bottom: 10px;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.image_results__single{
+  height: 150px;
+  background-size: cover;
   background-color: #000;
-  cursor: zoom-out;
+  cursor: zoom-in;
+}
+
+.image_results__download{
+  background-color: #000;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
 }
 
 .attribution{
   display: block;
   text-align: center;
   margin-bottom: 15px;
-
+display: none;
 }
 
 .attribution__image{
@@ -109,7 +163,7 @@ text-rendering: optimizeLegibility;
 .footer{
   text-align: center;
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
   left: 0px;
   right: 0px;
   padding-bottom: 15px;
